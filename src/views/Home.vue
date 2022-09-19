@@ -64,4 +64,20 @@ export default {};
     }
   }
 }
+@media (max-width: 600px) {
+  .home {
+    .container {
+      .content {
+        .description {
+          left: 30%;
+          width: 300px;
+          transform: translate(-29%, -50%);
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
