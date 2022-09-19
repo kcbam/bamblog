@@ -1,12 +1,27 @@
 <template>
-  <div class="home">Welcome home</div>
+  <div class="container">
+    <Counter></Counter><br />
+    <div class="columns">
+      <div class="column is-11">
+        <AddCounter></AddCounter>
+      </div>
+      <div class="column auto">
+        <RemoveCounter></RemoveCounter>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+<script>
+import Counter from "../components/Counter.vue";
+import AddCounter from "../components/AddCounter.vue";
+import RemoveCounter from "../components/RemoveCounter.vue";
 
-@Component({
-  components: {},
-})
-export default class Home extends Vue {}
+export default {
+  components: {
+    Counter,
+    AddCounter,
+    RemoveCounter,
+  },
+};
 </script>
