@@ -1,18 +1,20 @@
 <template>
   <div class="home">
     <div class="container">
-      <div class="head-section"></div>
       <div class="content">
-        <img src="../assets/hero.jpg" alt="" />
         <div class="description">
-          <h1>Bam Kadayat</h1>
+          <h1>Hey, I am Bam Kadayat</h1>
           <p>
-            When I started my career as a developer / designer I always
-            struggled to find the latest trends, news, and best practices in the
-            web development world or at least some developers who can help with
-            that.
+            I enjoy designing websites and mobile apps. When I started my career
+            as a developer and designer I always struggled to find the latest
+            trends, and good practices on the web development world or at least
+            some developers who can assists with that<span class="dot">.</span>
           </p>
+          <button class="btn">
+            <a href="mailto:bamkadayat@gmail.com">Get in touch</a>
+          </button>
         </div>
+        <div class="hero-img"><img src="./../assets/hero.svg" alt="" /></div>
       </div>
     </div>
   </div>
@@ -27,55 +29,70 @@ export default {};
   padding: 0;
   margin: 0;
   .container {
-    overflow: hidden;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
     .content {
-      width: 100vw;
-      height: 100vh;
-      position: relative;
-      img {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        filter: brightness(0.4);
-      }
+      margin-top: 2rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 5px;
       .description {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        background: rgba(26, 59, 75, 0.2);
-        padding: 8px;
-        border-radius: 5px;
-        border: 1px solid rgba($color: #fff, $alpha: 0.2);
-
         h1 {
-          font-weight: 700;
-          font-size: 1.8rem;
-          font-family: "poppins";
+          margin-top: 0px;
+          margin-bottom: 20px;
+          color: #1c2445;
+          font-size: 21px;
+          line-height: 1.333em;
+          font-weight: 600;
         }
         p {
-          line-height: 1.5;
-          font-size: 18px;
-          font-family: "poppins";
-          font-weight: 300;
+          font-size: 20px;
+          line-height: 1.8;
+          font-weight: 400;
+          color: #1c2445;
+          margin-bottom: 20px;
+          .dot {
+            font-size: 20px;
+            font-weight: 900;
+            color: #551a8b;
+          }
+        }
+      }
+      .hero-img {
+        img {
+          width: 100%;
+        }
+      }
+      .btn {
+        width: 200px;
+        border-radius: 35px;
+        padding: 15px;
+        background-color: #00457e;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        transition: 0.4s;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        &:hover {
+          opacity: 0.8;
+          transition: 0.4s;
         }
       }
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .home {
     .container {
       .content {
-        .description {
-          left: 30%;
-          width: 300px;
-          transform: translate(-29%, -50%);
-          p {
-            font-size: 1rem;
-          }
-        }
+        display: block;
       }
     }
   }
