@@ -6,7 +6,18 @@
         <span class="logo-text"><router-link to="/">BamBlog</router-link></span>
       </div>
       <ul>
-        <li><router-link to="/about">About</router-link></li>
+        <li>
+          <router-link to=""
+            ><img
+              class="icon-email"
+              src="https://assets.website-files.com/61129bb2ecedf803564c68ec/6112a4fa0865622bd03376a4_email-icon-personal-x-template.svg"
+              alt=""
+            />
+            <a href="mailto:bamkadayat@gmail.com" class="email"
+              >Get in touch</a
+            ></router-link
+          >
+        </li>
       </ul>
     </nav>
     <router-view />
@@ -44,6 +55,7 @@
       align-items: middle;
       li {
         padding: 0 1rem;
+
         a {
           text-decoration: none;
           font-size: 1rem;
@@ -51,19 +63,19 @@
           transition: 0.3s;
           position: relative;
           font-weight: 500;
+          display: flex;
+          align-items: center;
+          .icon-email {
+            color: #00457e;
+            width: 18px;
+          }
+          .email {
+            display: inline-block;
+            margin-left: 8px;
+          }
           &:hover {
             opacity: 0.6;
             transition: 0.3s;
-            &::after {
-              content: "";
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              height: 1px;
-              width: 100%; /* or 100px */
-              border-bottom: 2px solid #00457e;
-              transition: 0.3s;
-            }
           }
         }
       }

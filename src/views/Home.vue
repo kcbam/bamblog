@@ -48,7 +48,7 @@ export default {};
           font-weight: 600;
         }
         p {
-          font-size: 20px;
+          font-size: 18px;
           line-height: 1.8;
           font-weight: 400;
           color: #1c2445;
@@ -71,7 +71,7 @@ export default {};
         padding: 15px;
         background-color: #00457e;
         color: #fff;
-        font-size: 1rem;
+        font-size: 14px;
         border: none;
         margin-bottom: 1rem;
         cursor: pointer;
@@ -79,6 +79,7 @@ export default {};
         a {
           color: #fff;
           text-decoration: none;
+          text-transform: uppercase;
         }
         &:hover {
           opacity: 0.8;
