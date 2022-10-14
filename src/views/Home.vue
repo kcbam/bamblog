@@ -16,12 +16,20 @@
         </div>
         <div class="hero-img"><img src="./../assets/hero.svg" alt="" /></div>
       </div>
+      <div>
+        <contact></contact>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import Contact from "../components/contact.vue";
+export default {
+  components: {
+    Contact,
+  },
+};
 </script>
 <style lang="scss">
 .home {
@@ -46,13 +54,15 @@ export default {};
           font-size: 21px;
           line-height: 1.333em;
           font-weight: 600;
+          letter-spacing: 2px;
         }
         p {
-          font-size: 18px;
-          line-height: 1.8;
+          font-size: 16px;
+          line-height: 1.9;
           font-weight: 400;
           color: #1c2445;
           margin-bottom: 20px;
+
           .dot {
             font-size: 20px;
             font-weight: 900;
@@ -63,6 +73,7 @@ export default {};
       .hero-img {
         img {
           width: 100%;
+          margin-top: 2rem;
         }
       }
       .btn {
