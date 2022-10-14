@@ -94,6 +94,7 @@ export default {
         }
       }
       .form {
+        padding-bottom: 2.5rem;
         h2 {
           letter-spacing: 1px;
         }
