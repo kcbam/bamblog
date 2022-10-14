@@ -103,7 +103,7 @@ export default {
             position: absolute;
             top: 30%;
             left: 5px;
-            max-width: 20px;
+            max-width: 22px;
           }
         }
         .email-wrap {
@@ -112,7 +112,7 @@ export default {
             position: absolute;
             top: 30%;
             left: 5px;
-            max-width: 20px;
+            max-width: 22px;
           }
         }
         .form-control {
@@ -124,6 +124,7 @@ export default {
           outline: none;
           border: 1px solid rgba(50, 106, 151, 0.1);
           background-color: rgba(141, 161, 177, 0.1);
+          font-size: 16px;
         }
         .area-control {
           box-sizing: border-box;
@@ -134,6 +135,7 @@ export default {
           outline: none;
           border: 1px solid rgba(50, 106, 151, 0.1);
           background-color: rgba(141, 161, 177, 0.1);
+          font-size: 16px;
         }
         .btn {
           width: 100%;
@@ -145,6 +147,7 @@ export default {
           background-color: rgba(50, 106, 151, 1);
           color: #fff;
           cursor: pointer;
+          font-size: 1rem;
           &:hover {
             opacity: 0.9;
           }
