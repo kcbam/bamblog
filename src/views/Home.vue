@@ -64,7 +64,6 @@ export default {
           margin-bottom: 20px;
 
           .dot {
-            font-size: 20px;
             font-weight: 900;
             color: #551a8b;
           }
