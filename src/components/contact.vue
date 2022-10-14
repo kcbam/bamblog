@@ -14,29 +14,61 @@
                 required
                 class="form-control"
                 type="text"
+                v-model="form.name"
                 placeholder="Name"
               />
             </div>
             <div class="email-wrap">
               <img required class="icon" src="../assets/email.svg" alt="" />
-              <input class="form-control" type="email" placeholder="Email" />
+              <input
+                class="form-control"
+                type="email"
+                v-model="form.email"
+                placeholder="Email"
+              />
             </div>
             <textarea
-              class="form-control"
+              class="area-control"
               cols="30"
               rows="10"
+              v-model="form.message"
               placeholder="Message"
             ></textarea>
 
             <button class="btn" type="submit">Send</button>
           </form>
+          <span class="response" v-if="!loading">{{ msg.data.message }}</span>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data: () => ({
+    form: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    msg: "",
+    loading: true,
+  }),
+  methods: {
+    async handleSubmit() {
+      const result = await axios.post(
+        "https://brstore.shop/wp-json/bam/email",
+        this.form
+      );
+      this.msg = result;
+      this.loading = false;
+      this.form.name = "";
+      this.form.email = "";
+      this.form.message = "";
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .contact {
@@ -93,6 +125,16 @@ export default {};
           border: 1px solid rgba(50, 106, 151, 0.1);
           background-color: rgba(141, 161, 177, 0.1);
         }
+        .area-control {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 10px;
+          margin: 8px 0;
+          border-radius: 10px;
+          outline: none;
+          border: 1px solid rgba(50, 106, 151, 0.1);
+          background-color: rgba(141, 161, 177, 0.1);
+        }
         .btn {
           width: 100%;
           padding: 10px 5px;
@@ -103,7 +145,14 @@ export default {};
           background-color: rgba(50, 106, 151, 1);
           color: #fff;
           cursor: pointer;
+          &:hover {
+            opacity: 0.9;
+          }
         }
+      }
+      .response {
+        margin-left: 12px;
+        color: rgba(50, 106, 151, 1);
       }
     }
   }
