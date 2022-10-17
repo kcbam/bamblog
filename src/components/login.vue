@@ -36,7 +36,7 @@ export default {
   .form {
     max-width: 600px;
     margin: 0 auto;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    box-shadow: rgba(0, 69, 126, 0.4) 0px 0px 1px;
     padding: 1rem 2rem;
     margin-top: 3rem;
     border-radius: 10px;
