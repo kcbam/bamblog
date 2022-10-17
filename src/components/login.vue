@@ -6,29 +6,52 @@
         <input
           class="form-control"
           type="email"
-          v-model="form.email"
+          v-model="form.username"
           placeholder="Email"
+          required
         />
         <input
           class="form-control"
           v-model="form.password"
           type="password"
           placeholder="Password"
+          required
         />
         <button class="btn" type="submit">Login</button>
       </form>
+      <span class="error">{{ error }}</span>
     </div>
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   data: () => ({
     form: {
-      email: "",
+      username: "",
       password: "",
     },
     error: "",
   }),
+  methods: {
+    async handleSignon() {
+      try {
+        const result = await axios.post(
+          "https://brstore.shop/wp-json/bam/user/",
+          this.form
+        );
+        if (result.data.token) {
+          this.$router.push({ name: "Home" });
+        } else {
+          this.error = "Invalid credentails";
+          this.form.username = "";
+          this.form.password = "";
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -69,6 +92,10 @@ export default {
       border-radius: 10px;
       cursor: pointer;
       color: #fff;
+    }
+    .error {
+      color: #9c4a1a;
+      margin-left: 3px;
     }
   }
 }
