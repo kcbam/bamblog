@@ -44,6 +44,7 @@ export default {
       font-size: 1.5rem;
       letter-spacing: 1px;
       color: #00457e;
+      margin-bottom: 1rem;
     }
     .form-control {
       display: block;

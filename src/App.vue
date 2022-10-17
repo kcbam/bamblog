@@ -39,7 +39,7 @@
     .nav-wrap {
       width: 100%;
       // box-shadow: 0 1px 0 0 rgba(0, 69, 126, 0.1);
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 0px;
+      box-shadow: rgba(0, 69, 126, 0.1) 0px 2px 2px 0px;
       padding-top: 12px;
       padding-bottom: 5px;
       nav {
@@ -48,6 +48,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 10px;
         .logo {
           display: flex;
           align-items: center;
