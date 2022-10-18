@@ -41,7 +41,7 @@ export default {
           this.form
         );
         if (result.data.token) {
-          this.$router.push({ name: "Home" });
+          this.$router.push({ name: "Dashboard" });
         } else {
           this.error = "Invalid credentails";
           this.form.username = "";
