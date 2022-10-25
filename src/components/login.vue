@@ -19,7 +19,14 @@
         />
         <button class="btn" type="submit">Login</button>
       </form>
-      <span class="error">{{ error }}</span>
+      <span class="error">{{ error }} </span>
+      <span v-if="loading"
+        ><img
+          v-show="elementVisible"
+          style="width: 50px"
+          src="../assets/loader.gif"
+          alt=""
+      /></span>
     </div>
   </div>
 </template>
@@ -32,9 +39,13 @@ export default {
       password: "",
     },
     error: "",
+    loading: false,
+    elementVisible: true,
   }),
   methods: {
     async handleSignon() {
+      setTimeout(() => (this.elementVisible = false), 2000);
+      this.loading = true;
       try {
         const result = await axios.post(
           "https://brstore.shop/wp-json/bam/user/",
@@ -42,6 +53,7 @@ export default {
         );
         if (result.data.token) {
           this.$router.push({ name: "Dashboard" });
+          this.loading = false;
         } else {
           this.error = "Invalid credentails";
           this.form.username = "";
