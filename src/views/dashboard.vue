@@ -4,10 +4,17 @@
       <div class="left-nav">
         <ul>
           <li>
-            <img class="icon-dashboard" src="../assets/dashboard.svg" alt="" />
-            Dashboard
+            <div class="wrap-icon">
+              <img class="icon-dashboard" src="../assets/grid.svg" alt="" />
+              <span>Dashboard</span>
+            </div>
           </li>
-          <li>Projects</li>
+          <li>
+            <div class="wrap-icon">
+              <img class="icon-dashboard" src="../assets/list.svg" alt="" />
+              <span>Projects</span>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="content">
@@ -25,27 +32,34 @@ export default {};
     display: grid;
     grid-template-columns: repeat(2, 20% 80%);
     gap: 1rem;
+    width: 100vw;
+    overflow: hidden;
     .left-nav {
+      padding-top: 1rem;
       background: rgba(0, 69, 126, 0.8);
       color: #fff;
       height: 100vh;
       ul {
         list-style: none;
-        margin-top: 20px;
         li {
           padding: 7px;
-          .icon-dashboard {
-            color: #fff;
-            width: 15px;
+          .wrap-icon {
+            display: flex;
+            gap: 8px;
+            .icon-dashboard {
+              color: #fff;
+              width: 15px;
+              display: inline-block;
+            }
           }
         }
       }
     }
     .content {
       h1 {
+        padding-top: 1rem;
         font-weight: 500;
         font-size: 1.4rem;
-        margin-top: 1rem;
         color: rgba(0, 69, 126, 1);
       }
     }
