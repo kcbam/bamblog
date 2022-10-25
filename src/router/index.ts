@@ -21,6 +21,9 @@ const routes: Array<RouteConfig> = [
     path: "/dashboard",
     name: "Dashboard",
     component: Dashboard,
+    meta: {
+      hideNavbar: true,
+    },
   },
 ];
 

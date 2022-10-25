@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="nav-wrap">
+    <div class="nav-wrap" v-if="!$route.meta.hideNavbar">
       <nav>
         <div class="logo">
           <span><img src="./assets/bam.png" alt="" style="width: 40px" /></span>

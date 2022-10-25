@@ -3,7 +3,10 @@
     <div class="dashboard-wrap">
       <div class="left-nav">
         <ul>
-          <li>Dashboard</li>
+          <li>
+            <img class="icon-dashboard" src="../assets/dashboard.svg" alt="" />
+            Dashboard
+          </li>
           <li>Projects</li>
         </ul>
       </div>
@@ -31,6 +34,10 @@ export default {};
         margin-top: 20px;
         li {
           padding: 7px;
+          .icon-dashboard {
+            color: #fff;
+            width: 15px;
+          }
         }
       }
     }
