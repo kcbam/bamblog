@@ -74,9 +74,9 @@ export default {};
         h1 {
           padding-top: 1rem;
           font-weight: 500;
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           color: rgba(0, 69, 126, 1);
-          margin-left: 4rem;
+          margin-left: 3rem;
         }
       }
     }
