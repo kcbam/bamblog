@@ -39,6 +39,7 @@ export default {};
       background: rgba(0, 69, 126, 0.8);
       color: #fff;
       height: 100vh;
+      min-width: 130px;
       ul {
         list-style: none;
         li {
@@ -61,6 +62,7 @@ export default {};
         font-weight: 500;
         font-size: 1.4rem;
         color: rgba(0, 69, 126, 1);
+        margin-left: 1.1rem;
       }
     }
   }
